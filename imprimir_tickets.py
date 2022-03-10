@@ -72,6 +72,10 @@ def main():
 
 
 def get_int(prompt):
+    """
+    Solicita al usuario que ingrese un entero. Repetira tantas veces como sea
+    necesario hasta que el usuario ingrese un dato de tipo entero.
+    """
     while True:
         try:
             return int(input(prompt))
@@ -79,10 +83,16 @@ def get_int(prompt):
             pass
 
 def alt_tab():
+    """
+    Realiza la combinacion de alt + tab con un tiempo de espera.
+    """
     hotkey("alt", "tab")
     sleep(1.5)
 
 def click_and_wait(coordinates, seconds:int):
+    """
+    Combina las 2 funciones de click y sleep.
+    """
     click(coordinates)
     sleep(seconds)
 
